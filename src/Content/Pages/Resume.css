@@ -1,0 +1,96 @@
+.ResumeBanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    background-image: url('../../assets/resume_banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+.Content .Educations, .Content .Experiences, .Content .Proffesional_skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.Content .Educations .Education,
+.Content .Experiences .Experience{
+    margin: 5px;
+    flex-basis: 310px;
+}
+.Content .Educations .Education .desc,
+.Content .Experiences .Experience .desc{
+    max-width: 310px;
+    margin-bottom: 30px;
+    border: 4px solid #4C5A67;
+    border-radius: 5px;
+}
+.Content .Educations .Education .desc h4,
+.Content .Experiences .Experience .desc h4{
+    color: #2C77C1;
+}
+
+.Content .Educations .Education .Education_content_wrapper .fromTo,
+.Content .Experiences .Experience .Experiences_content_wrapper .fromTo{
+    border: 4px solid #4C5A67;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.Content .Proffesional_skills .Proffesional_skill{
+    flex-basis: 85px;
+}
+
+.Content .Personal_skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Content .Personal_skills .Personal_skill{
+    flex-basis: 155px;
+}
+.Content .CircularProgress{
+    width: 90px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .Content .Educations,
+    .Content .Experiences{
+        margin: auto;
+        width: 95%;
+    }
+    .Content .Educations .Education,
+    .Content .Experiences .Experience{
+        margin: 0 15px;
+        flex-basis: 260px;
+    }
+}
+
+@media (min-width: 1024px){
+    .Content .Educations,
+    .Content .Experiences{
+        width: 100%;
+    }
+    .Content .Educations .Education,
+    .Content .Experiences .Experience{
+        margin: 0 15px;
+        flex-basis: 350px;
+    }
+}
+
+@media (max-width: 480px){
+    body{
+        font-size: 85%;
+    }
+    .Content .Proffesional_skills, .Content .Personal_skills{
+        justify-content: space-around;
+    }
+    .Content .Personal_skills .Personal_skill{
+        flex-basis: 100px;
+    }
+    .Content .CircularProgress{
+        width: 70px;
+    }
+}

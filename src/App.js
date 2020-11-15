@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useCallback } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import Slidemenu from './Aside/SlideMenu/SlideMenu'
+import Content from './Content/Content'
+
 import './App.css';
 
 function App() {
+  //Implementirati nakon ubacenog sadrzaja na applikaciju
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isClosedNav, setIsClosedNav] = useState(false)
+
+  const closeNavHandler = () => {
+    setIsClosedNav(!isClosedNav)
+  }
+  //Implementirati nakon ubacenog sadrzaja na applikaciju
+  const login = useCallback(() => {
+    console.log('Logged In')
+  })
+  //Implementirati nakon ubacenog sadrzaja na applikaciju
+  const logout = useCallback(() => {
+    console.log('Loged out')
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Slidemenu isClosedNav={isClosedNav} closeNavHandler={closeNavHandler} />
+        <Content isClosedNav={isClosedNav} />
+      </div>
+    </Router>
   );
 }
 

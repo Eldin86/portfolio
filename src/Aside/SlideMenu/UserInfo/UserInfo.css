@@ -1,0 +1,16 @@
+.UserInfo{
+    position: relative;
+    
+}
+.UserInfo .Social{
+    display: flex;
+    justify-content: space-around;
+}
+.UserInfo .Avatar_Container{
+    display: inline-block;
+    padding: 10px;
+}
+.UserInfo .Avatar_Container img{
+    border: 5px solid rgba(27, 40, 56, 0.6);
+    padding: 5px;
+}
