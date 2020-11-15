@@ -8,7 +8,7 @@ import './UserInfo.css'
 const UserInfo = (props) => {
     return (
         <div className="UserInfo">
-            <div className="Social">
+            <div className="Social mb-3">
                 {
                     props.socials.map(social => {
                         return (

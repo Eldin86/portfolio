@@ -38,10 +38,6 @@
     margin-left: 30px;
 }
 
-.Content{
-  
-}
-
 @media (max-width: 768px){
     .ContentContainer{
         margin: 10px;
